@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Java Script validation</h2>
+    <p>enter a number and click ok:</p>
+
+    <input id="id1" type="number" min="1" max="10" required>
+    <button onclick="myFunction()">OK</button>
+
+    <P>If the number is less than 1 or greater than 10, an error message will be displayed. </P>
+
+    <p id="id2"></p>
+    <script>
+        function myFunction() {
+            const i = document.getElementById("id1");
+            if (!i.checkvalidity()) { 
+                document.getElementById("id2").innerHTML= i.validationmessage;
+            }  
+        else {
+            document.getElementById("id2").innerHTML = "Input is correct";
+        }    
+    }
+    </script>
+</body>
+</html>
